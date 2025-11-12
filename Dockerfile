@@ -1,7 +1,7 @@
 # Multi-stage build for TikLeases TanStack Start application
 
 # Stage 1: Build stage
-FROM node:20-alpine AS builder
+FROM node:lts-alpine AS builder
 
 # Set working directory
 WORKDIR /app
@@ -19,7 +19,7 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Production stage
-FROM node:20-alpine AS runner
+FROM node:lts-alpine AS runner
 
 # Set working directory
 WORKDIR /app
@@ -38,8 +38,8 @@ COPY --from=builder /app/.output ./.output
 
 # Create a non-root user for security
 RUN addgroup -g 1001 -S nodejs && \
-    adduser -S nodejs -u 1001 && \
-    chown -R nodejs:nodejs /app
+  adduser -S nodejs -u 1001 && \
+  chown -R nodejs:nodejs /app
 
 # Switch to non-root user
 USER nodejs
