@@ -1,0 +1,4 @@
+@import "tailwindcss";
+
+/* Configure content sources for Tailwind to scan */
+@source "../**/*.{js,ts,jsx,tsx}";
