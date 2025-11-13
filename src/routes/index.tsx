@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { fetchDHCPLeases, getUniqueVLANs } from "../utils/mikrotik";
-import type { DHCPLease } from "../types/dhcp-lease";
 
 export const Route = createFileRoute("/")({
   loader: async () => {
@@ -60,7 +59,7 @@ function IndexPage() {
   }
 
   return (
-    <div className="min-h-screen p-4 md:p-8">
+    <div className="min-h-screen p-4 md:p-8 flex justify-between flex-col">
       <div className="max-w-7xl mx-auto flex flex-col gap-4">
         {/* Header */}
         <div className="mb-6">
