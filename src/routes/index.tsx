@@ -173,6 +173,9 @@ function IndexPage() {
           </div>
         )}
       </div>
+      <div className="flex justify-around items-center">
+        <a href="https://github.com/wurmr">@wurmr</a>
+      </div>
     </div>
   );
 }
