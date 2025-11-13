@@ -1,5 +1,7 @@
 # TikLeases
 
+[![Build and Publish Docker Image](https://github.com/wurmr/tik-leases/actions/workflows/docker-publish.yml/badge.svg?branch=main)](https://github.com/wurmr/tik-leases/actions/workflows/docker-publish.yml)
+
 A web application for monitoring DHCP leases from MikroTik routers. Displays active leases in a filterable table interface with support for multiple VLANs.
 
 ## Quick Start with Docker
